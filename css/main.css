@@ -202,7 +202,7 @@ option {
 #main-section {
   position: relative;
   height: 586px;
-  background-color: #f8f9fb;
+  background-color: #fff;
 }
 #main-section .main-section-in {
   height: 100%;
@@ -330,6 +330,11 @@ option {
   top: 70px;
   text-align: right;
 }
+.main-section-right-in {
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
 
 /* btn */
 .main-button-1,

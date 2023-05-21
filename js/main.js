@@ -33,6 +33,9 @@ Main.prototype.set_event = function() {
     }, 1100)
 
   })
+  $('#button-ms-b').on('click', function() {
+    $('')
 
+  })
 
 }
