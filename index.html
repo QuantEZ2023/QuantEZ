@@ -11,8 +11,10 @@
   <link href="./css/main.css" type="text/css" rel="stylesheet">
   <link href="./css/gnb.css" type="text/css" rel="stylesheet">
   <link href="./css/style.css" type="text/css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
 </head>
-<body>
+<body class="wrap-main">
   <div id="header">
     <div id="header-top">
       <div id="header-top-right">
@@ -88,7 +90,7 @@
               사용자 맞춤형 백테스팅 가이드
             </span>
           </p>
-          <div class="button-box">
+          <div class="button-box">  <!-- 백테스팅 사이트와 백테스팅 가이드 링크 추가 예정 -->
             <a href="#" target="_blank" class="main-button-1" tabindex="0">백테스팅 바로가기</a>
             <a href="#" target="_blank" class="main-button-2" tabindex="0">사용자 가이드 보기</a>
           </div>
@@ -96,8 +98,8 @@
       </div>       
     </div>
     <div id="main-banner-2">
-      <div class="main-banner-2-img">
-        <div class="main-banner-2-right">
+      <div class="main-banner-2-img"> <!-- 배너 이미지위치 설정하기 위한 div -->
+        <div class="main-banner-2-right"> <!-- 배너의 전체적인 글자들을 오른쪽으로 밀기 위한 div -->
           <p class="p-1">
             <span>투자의 이정표, 재무제표!</span>
           </p>
@@ -120,23 +122,93 @@
       </div>
     </div>
     <div id="main-section">
-      
-
+      <div class="main-section-in">
+        <!-- 나만의 투자전략 -->
+        <div class="main-section-item" id="main-section-item-1">
+          <div class="main-section-bg"></div>
+          <div class="main-section-left">
+            <p class="p-1">
+              누구나 자신만의 투자전략은 있습니다
+            </p>
+            <p class="p-2">
+              검증된 나만의 투자전략으로
+              <br>
+              쉽게 자산을 관리하세요!
+            </p>
+            <p class="p-3">
+              젠포트에서 제공하는 손쉬운 투자 패러다임!
+              <br>
+              손쉬운 전략 설정으로 나만의 전략을 만들어보세요!
+            </p>
+            <div class="button-box">
+              <span class="ms-button-1 main-section-button-jasan" id="button-ms-c">자산배분 전략 만들기</span>
+            </div>
+          </div>
+          <div class="main-section-right">
+            
+          </div>
+        </div>
+      </div>
+      <!-- 커버 -->
+      <div class="ms-item-cover"> <!-- ms = main-section -->
+        <div class="ms-item-cover-bg"></div> <!-- 후에 배너 이미지 제작 예정 -->
+        <div class="ms-item-cover-in">
+          <div class="msic-left"> <!-- msic = main-section-item- cover -->
+            <p class="p-1">
+              누구나 자신만의 투자전략은 있습니다
+            </p>
+            <p class="p-2">
+              검증된 나만의 투자전략으로
+              <br>
+              쉽게 자산을 관리하세요!
+            </p>
+            <p class="p-3">
+              퀀티지에서 제공하는 손쉬운 투자 패러다임!
+              <br>
+              손쉬운 전략 설정으로 나만의 전략을 만들어 보세요!
+            </p>
+            <div class="button-box">
+              <span class="main-button-2" id="button-ms-a">알고리즘 트레이딩 체험하기</span>
+            </div>
+          </div>
+          <div class="msic-right">
+            <p class="p-1">
+              퀀티지의 새로운 기능, 분산투자!
+            </p>
+            <p class="p-2">
+              여러 자산군에 대한 분산투자,
+              <br>
+              낮은 변동성과 안정적인 수익!
+            </p>
+            <p class="p-3">
+              자산배분은 기대수익률과 위험 수준이 다양한 여러 자산군들을
+              <br>
+              (주식, 채권, 원자재 등)에 투자금을 알맞게 배분하여 변동성이 
+              <br>
+              낮으면서도 장기적으로 안정적인 수익률을 추구하는 투자방식 입니다
+            </p>
+            <div class="button-box">
+              <span class="main-button-2" id="button-ms-b">자산배분 체험하기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // 커버 -->
     </div>
   </div>
-  <div id="footer">
-    <div class="footer-in">
+  <div id="footer"> <!-- 푸터 이미지 삽입 및 기본 레이아웃 설정 -->
+    <div class="footer-in"> <!-- 푸터 위치 설정 -->
       <div class="footer-left">
         <ul>
-          <li class="footer-left-li-1">
+          <li class="footer-left-li-1"> <!-- 카카오톡 상담센터 관련 설명 -->
             <span class="footer-link-kakaotalk">
               <span>
                 카카오톡 고객센터 : 평일 10:00~17:00
               </span>
-              카카오톡 채널@QuantEZ
+              카카오톡 채널@QuantEZ   <!-- 나중에 누르면 카카오톡 오픈링크 QR이 나오는 팝업 제작 예정 -->
             </span>
           </li>
-          <li class="footer-left-li-2">
+          <li class="footer-left-li-2"> <!-- 블로그, 카페 등의 링크를 이미지 안에 삽입 -->
             <a href="mailto:ljh990722@g.hongik.ac.kr" class="footer-link-email">ljh990722@g.hongik.ac.kr</a>
           </li>
           <li class="footer-socialLink">
@@ -158,7 +230,7 @@
           </li>
         </ul>      
       </div>
-      <div class="footer-right">
+      <div class="footer-right">  <!-- 제작자 정보 및 주의사항 삽입 -->
         <p class="copy-1">
           서울시 마포구 와우산로10길 3 엘케이빌딩 3층
           <br>
@@ -166,7 +238,9 @@
           &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
           개인정보보호책임자 : 이희택
           <br><br>
-          <br><br>
+          <br>
+          아이콘 제작자 : Pixel Perfect
+          <br>
           본 사이트에 개재되는 정보는 오류 및 지연이 있을 수 있으며, 그 이용에 관한 책임은 이용자 본인에게 있습니다.
           <br>
           본 사이트의 내용을 무단전재 및 복사할 수 없습니다.
