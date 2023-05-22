@@ -333,6 +333,8 @@ option {
 .main-section-right-in {
   overflow: hidden;
   margin-bottom: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 0px rgba(219, 219, 219, 0.5);
 }
 .main-section-right-con {
   padding: 20px 25px 4px 25px;
@@ -391,6 +393,19 @@ option {
   background: #5400CF;
   border-radius: 4px;
 }
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+.radio-box {
+  width: 120%;
+}
+.radio-box .radio-style-3 {
+  margin-right: 10px;
+}
+.radio-box .radio-style-5 {
+  margin-right: 10px;
+}
+
 
 /* btn */
 .main-button-1,

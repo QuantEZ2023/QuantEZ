@@ -34,7 +34,16 @@ Main.prototype.set_event = function() {
 
   })
   $('#button-ms-b').on('click', function() {
-    $('')
+    $('.msic-left').fadeOut();
+    $('#button-ms-b').fadeOut();
+    setTimeout(function () {
+      $('.ms-item-cover-bg').fadeOut();
+    }, 200)
+    setTimeout(function () {
+      $('.msic-right').animate({'top' : '130px'}, 400, 'easeOutQuart');
+      $('.msic-right .p-1').animate({'margin-bottom' : '10px'});
+      $('.msic-right .p-2').animate({'margin-bottom' : '40px'});
+    }, 400)
 
   })
 
