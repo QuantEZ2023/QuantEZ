@@ -334,7 +334,63 @@ option {
   overflow: hidden;
   margin-bottom: 18px;
 }
-
+.main-section-right-con {
+  padding: 20px 25px 4px 25px;
+  background-color: fff;
+}
+.main-section-right-item {
+  margin-bottom: 20px;
+}
+.main-section .msr-text-1 {
+  font-size: 16px;
+  color: #909dab;
+  letter-spacing: -0.025em;
+}
+.main-section .msr-text-2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #173559;
+  letter-spacing: -0.025em;
+}
+.range-box{
+  position: relative;
+  padding: 8px 0;
+}
+.range-bg {
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #c7d4dd;
+}
+.range-bg-mask {
+  height: 100%;
+  width: 0;
+  background: #5400CF;
+}
+.main-section .range-point {
+  cursor: default;
+}
+.range-point {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 16px;
+  width: 16px;
+  margin-left: -10px;
+  border: 2px solid #e8e9e9;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.range-point span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 4px 0 0 4px;
+  background: #5400CF;
+  border-radius: 4px;
+}
 
 /* btn */
 .main-button-1,
