@@ -1,24 +1,429 @@
-.fl {
-  float: left;
-}
-.fr {
-  float: right;
-}
-
+.fl {float: left;}
+.fr {float: right;}
+.al {text-align: left;}
+.ar {text-align: right;}
+.ac {text-align: center;}
+.bold {font-weight: 600;}
 
 /* margin-top */
-.mt-0 {
-  margin-top: 0 !important;
+.mt-0 {margin-top: 0 !important;}
+.mt-5 {margin-top: 5 !important;}
+.mt-8 {margin-top: 8 !important;}
+.mt-10 {margin-top: 10 !important;}
+.mt-15 {margin-top: 15 !important;}
+
+/* normalize */
+.taC {text-align: center;}
+.taR {text-align: right;}
+.taL {text-align: left;}
+
+.txt_plus {color: #f83838;}
+.txt_minus {color: #177cd2;}
+
+.ml4px {margin-left: 4px;}
+.ml8px {margin-left: 8px;}
+.ml15px {margin-left: 15px;}
+.ml20px {margin-left: 20px;}
+
+.mr4px {margin-right:4px;}
+.mr8px {margin-right:8px;}
+.mr15px {margin-right:15px;}
+.mr20px {margin-right:20px;}
+
+.mt6px {margin-top:6px;}
+.mb6px {margin-bottom:6px;}
+.mt8px {margin-top:8px;}
+.mb8px {margin-bottom:8px;}
+.mt10px {margin-top:10px;}
+.mt20px {margin-top:20px;}
+.mt30px {margin-top:30px;}
+.mt40px {margin-top:40px;}
+
+.mb10px {margin-bottom:10px;}
+.mb15px {margin-bottom:15px;}
+.mb20px {margin-bottom:20px;}
+.mb30px {margin-bottom:30px;}
+.mb40px {margin-bottom:40px;}
+.mb50px {margin-bottom:50px;}
+
+.lh18px {line-height:18px;}
+.lh20px {line-height:20px;}
+.lh33px {line-height: 33px;}
+
+.ellipsis {text-overflow:ellipsis;}
+
+.txtbold {font-weight:bold;}
+.txtcolorblack {color:#000;}
+
+/* table  = tbl */
+.tbl_vertical {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  letter-spacing: 0;
 }
-.mt-5 {
-  margin-top: 5 !important;
+.tbl_vertical th {
+  text-align: center;
+  background: #f1f3f5;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  font-weight: 600;
+  color: #424242;
+  padding: 10px;
 }
-.mt-8 {
-  margin-top: 8 !important;
+.tbl_vertical th.buy {
+  background: #fcecec;
 }
-.mt-10 {
-  margin-top: 10 !important;
+.tbl_vertical th.sell {
+  background: #e1f1f8;
 }
-.mt-15 {
-  margin-top: 15 !important;
+.tbl_vertical th.tradeList {
+  background: #143b58;
+  color: #fff;
+  border: 1px solid #143b58;
+}
+.tbl_vertical tr.tradeList_02 th {
+  background: #d3d9de;
+  border: 1px solid #cacaca;
+}
+.tbl_vertical th.title {
+  background: #efefef;
+}
+.tbl_vertical th.subtitle {
+  background: #fcfcfc;
+}
+.tbl_vertical th.blR {  /* bl = border */
+  border-right: 1px solid #ddd;
+}
+.tbl_vertical th.taL { /* ta = text align */
+  text-align: left;
+}
+.tbl_vertical th.divide {
+  border-bottom: 2px solid #ccc;
+}
+.tbl_vertical tr.bg_ChangeDate { /* bg = background */
+  background: #e1f1f8;
+}
+.tbl_vertical td.taC {
+  text-align: center;
+}
+.tbl_vertical td.taR {
+  text-align: right;
+  padding-right: 14px;
+}
+.tbl_vertical td.taL {
+  text-align: left;
+  padding: 10px 14px;
+}
+.tbl_vertical td.blR {
+  border-right: 1px solid #ddd;
+}
+.tbl_vertical td.divide {
+  border-bottom: 2px solid #ccc;
+}
+.tbl_vertical td.bg_vi {
+  background: #fcd8d8;
+}
+.tbl_vertical td.bg_buy {
+  background: #5400CF;
+  color: #fff;
+}
+.tbl_vertical td.bg_sell {
+  background: #f03636;
+  color: #fff;
+}
+.tbl_vertical td.new-port-step1 {
+  height: 70px;
+}
+.tbl_vertical td.emptyList {
+  padding: 20px 0;
+}
+.tbl_vertical td {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 18px;
+  color: #333;
+  background: #fff;
+}
+.tbl_vertical td.stockRank {
+  padding: 10px 12px;
+}
+.tbl_vertical td img {
+  margin-bottom: -3px;
+  padding-left: 4px;
+}
+.tbl_vertical td span.tblRate {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.tbl_vertical td span.top {
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+.tbl_vertical td span.tdU {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tbl_vertical td em {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.tbl_vertical input[type=text] {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+}
+.num_rank {
+  display: inline-block;
+  font-family: Tahoma;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  width: 9px;
+  height: 9px;
+  line-height: 9px;
+
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+.tbl_vertical td span.stockName {
+  font-weight: 600;
+  padding-left: 2px;
+}
+.tbl_vertical td span.stockCode {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+.tbl_horizon {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+.tbl_horizon th {
+  background: #f1f3f5;
+  font-size: 13px;
+  font-weight: 600;
+  color: #424242;
+  padding: 20px 10px;
+}
+.tbl_horizon th.buy {
+  background: #ffe8e8;
+}
+.tbl_horizon th.big-rgt {
+  border-right: 1px solid #bbb;
+}
+.tbl_horizon th.trade {
+  padding: 12px;
+}
+.tbl_horizon th.blB {
+  border-bottom: 1px solid #ddd;
+}
+.tbl_horizon td {
+  padding: 14px 14px;
+  color: #333;
+  letter-spacing: 0;
+  border: 1px solid #ddd;
+}
+.tbl_horizon td.taC {
+  text-align: center;
+}
+.tbl_horizon td.taL {
+  text-align: left;
+}
+.tbl_horizon td.taR {
+  text-align: right;
+}
+.tbl_horizon td.bg_gray {
+  background: #f5f7f9;
+}
+.tbl_horizon td.blg_bottom {
+  border-bottom: 1px solid #bbb;
+}
+.tbl_horizon td.blg_right {
+  border-right: 1px solid #bbb;
+}
+.tbl_horizon td.trade {
+  padding: 12px;
+}
+
+/* subtitle */
+.subtitle_15px {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #333;
+}
+.subtitle_16px {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #333;
+}
+
+/* input */
+input[type=text].text_extrasmall {
+  width: 60px;
+  height: 33px;
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  color: #333;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+input[type=text].text_small {
+  width: 70px;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  color: #333;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+input[type=text].text_medium {
+  width: 100px;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  color: #333;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+input[type=number].text_extrasmall {
+  width: 120px;
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  color: #333;
+  vertical-align: top;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+input[type=number].text_extrasmall::-webkit-inner-spin-button {
+  opacity: 1;
+}
+input[type=text].text_conditionInput {
+  width: 40px;
+  padding: 8px 7px;
+  border: 1px solid #bbb;
+  color: #333;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+select.select_newport {
+  display: inline-block;
+  border: 1px solid #bbb;
+  padding: 7px 10px;
+  color: #333;
+  vertical-align: top;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/* button */
+.btn_extrasmall {
+  font-size: 12px;
+  transition: 0.1s;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.btn_extrasmall:hover {
+  cursor: pointer;
+}
+.btn_small {
+  font-size: 12px;
+  transition: 0.1s;
+  text-align: center;
+  padding: 5px 12px;
+  vertical-align: middle;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.btn_small img{
+  vertical-align: middle;
+  padding-right: 3px;
+  margin-top: 3px;
+}
+.btn_small:hover {
+  cursor: pointer;
+}
+.btn_white {
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #aaa;
+  font-weight: 600;
+  color: #888;
+  box-shadow: inset 0px -1.5px 1px #e0e0e0;
+}
+.btn_white:hover {
+  border: 1px solid #888;
+  font-weight: 600;
+  color: #555;
+  box-shadow: inset 0px 0px 0px #e0e0e0;
+}
+
+/* 매매조건 */
+.box_tradeCondition {
+  width: 48px;
+  overflow: hidden;
+}
+.condition {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.condition .full {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 3px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* universe */
+.box_universe {
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin-top: 6px;
+
+  padding: 18px 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.box_universe p {
+  display: inline-block;
+  padding-right: 20px;
+}
+.box_universe p:last-child {
+  padding-right: 0;
+}
+.box_universe p.title {
+  width: 90px;
+  border-right: 2px solid #ccc;
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 5px;
+}
+.box_universe p.check_fix {
+  width: 170px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.box_universe p.check_theme {
+  width: 20%;
 }

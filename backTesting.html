@@ -6,11 +6,13 @@
   <title>퀀티지:월봉 백테스팅</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   </style>
   <link href="./css/main.css" type="text/css" rel="stylesheet">
   <link href="./css/gnb.css" type="text/css" rel="stylesheet">
   <link href="./css/style.css" type="text/css" rel="stylesheet">
   <link href="./css/backTest.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="/js/jquery.mtz.monthpicker.js"></script>
 </head>
 <body class="wrap-main">
   <div id="header">
@@ -118,10 +120,10 @@
             <div class="fr box-port-description">
               <p class="subtitle_16px">
                 포트 설명
-                <span class="infotxt_13px666" style="font-weight: normal; padding-left: 8px;">(선택사항)</span>
+                <span class="infotxt_12px666" style="font-weight: normal; padding-left: 8px;">(선택사항)</span>
               </p>
               <div>
-                <input type="txt" id="Description" placeholder="포트폴리오에 대한 설명을 100자 이내롤 남겨주세요." class="fl" style="margin-top: -1px;" onfocus="inputElBtn('Description');" onblur="inputElBtn('Description');" onkeydown="inputElBtn('Description');">
+                <input type="txt" id="Description" placeholder="포트폴리오에 대한 설명을 100자 이내로 남겨주세요." class="fl" style="margin-top: -1px;" onfocus="inputElBtn('Description');" onblur="inputElBtn('Description');" onkeydown="inputElBtn('Description');">
                 <div class="fl" style="margin-left: -5px;width: 15px; margin-top: 10px;">
                   <img id="btnDescription" src="img/icn_delForm.png" style="margin-left: -25px; cursor: pointer;display: none;">
                 </div>
@@ -130,14 +132,206 @@
             <div class="box-port-sample">
               <p class="subtitle_16px">
                 샘플포트 만들기
-                <span class="infotxt_13px666" style="font-weight: normal; padding-left: 8px;">포트? 모르겠다면?</span>
+                <span class="infotxt_12px666" style="font-weight: normal; padding-left: 4px;">포트? 모르겠다면?</span>
               </p>
               <a id="btnSample" class="button-sample" href="https://genport.newsystock.com/resource/kor_monthly_sample_20220707_v1_8.pdf"> 
                 따라만 하면 완성! 샘플포트 만들기
-                <img src="/img/"
+                <img src="/img/icn_arr_r.png">
               </a>
-
             </div>
+          </div>
+          <!-- // 포트 제목, 포트 설명 -->
+          <!-- 기본 조건 -->
+          <div class="port_subBox">
+            <ul>
+              <li class="subtitle_16px">기본 조건</li>
+              <table class="fl tbl_vertical" style="width: 220px; margin-right: 13px;">
+                <colgroup>
+                  <col style="width: 220px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      운용자금
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="new-port-step1 taC">
+                      <input type="text" id="startAsset" class="text_extrasmall taR" placeholder="5,000" value="5,000" onkeydown="return inputCheckNumOnly(event);" style="width: 70px;">
+                      <span class="bold ml8px" id="StartAssetUnit">만원</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="fl tbl_vertical" style="width: 438px; margin-right: 14px;">
+                <colgroup>
+                  <col style="width: 500px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      운용기간
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="new-port-step1 taC">
+                      <p>
+                        <input type="text" id="StartDate" class="text_medium taC monthpickerSet mtz-monthpicker-widgetcontainer" freedate="20220524">
+                        <span class="bold ml8px mr8px">부터</span>
+                        <input type="text" id="EndDate" class="text_medium taC monthpickerSet mtz-monthpicker-widgetcontainer" curdate="2023/05/23" maxdate="2023/05/23">
+                        <span class="bold ml8px">까지</span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="fl tbl_vertical" style="width: 220px;">
+                <colgroup>
+                  <col style="width: 220px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      수수료율
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="new-port-step1 taC">
+                      <input type="text" id="FeeRate" class="text_extrasmall taR" placeholder="0.100" value="0.100" onkeydown="return inputCheckNumOnly(event);">
+                      <span class="bold ml8px">%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="fr tbl_vertical" style="width: 220px;">
+                <colgroup>
+                  <col style="width: 220px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      슬리피지
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="new-port-step1 taC">
+                      <input type="text" id="Slippage" class="text_extrasmall taR" placeholder="0.000" value="0.000" onkeydown="return inputCheckNumOnly(event);">
+                      <span class="bold ml8px">%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ul>
+          </div>
+          <!-- // 기본조건 -->
+          <!-- 매매조건 -->
+          <div class="port_subBox">
+            <!-- 매수조건 -->
+            <div class="fl box_tradeCondition" style="width: 74%;">
+              <ul>
+                <li class="subtitle_15px">
+                  <span class="txt_plus">매수조건</span>
+                </li>
+                <table class="tbl_vertical" style="margin-bottom: 10px;" id="tblBuyPriceTypeNormal">
+                  <thead>
+                    <tr>
+                      <th class="buy">
+                        매수 가격기준
+                      </th>
+                      <th class="buy">
+                        최대 보유종목 수
+                      </th>
+                      <th class="buy">
+                        리밸런싱 기간
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="taC blR">
+                        <span>전일종가</span>
+                        <input type="text" id="BuyPriceVal" class="text_extrasmall taL ml4px" style="border-radius: 3px 0px 0px 3px;" value="+5.0" onkeydown="return inputCheckNumOnly(event);">
+                        <span class="bold ml4px">%</span>
+                      </td>
+                      <td class="taC blR">
+                        <input type="text" id="MaxBuyCount" class="text_extrasmall taR" placeholder="5" value="10" onkeydown="return inputCheckNumOnly(event);">
+                        <span class="bold ml4px">종목</span>
+                      </td>
+                      <td class="taC">
+                        <div class="ml4px">
+                          <select id="ReBalancingCycle" class="select_newport">
+                            <option value="1" selected="selected">1개월</option>
+                            <option value="2">2개월</option>
+                            <option value="3">3개월</option>
+                            <option value="4">4개월</option>
+                            <option value="5">5개월</option>
+                            <option value="6">6개월</option>
+                            <option value="7">7개월</option>
+                            <option value="8">8개월</option>
+                            <option value="9">9개월</option>
+                            <option value="10">10개월</option>
+                            <option value="11">11개월</option>
+                            <option value="12">12개월</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ul>
+            </div>
+            <!-- //매수조건 -->
+            <!-- 매도조건 -->
+            <div class="fr box_tradeCondition" style="width: 24%;">
+              <ul>
+                <li class="subtitle_15px">
+                  <span class="txt_minus">매도조건</span>
+                </li>
+                <table class="tbl_vertical" style="margin-bottom: 10px;" id="tblStopCondition">
+                  <thead>
+                    <tr>
+                      <th class="sell" colspan="2">
+                        매도 가격기준
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="taC">
+                        <span>전일종가</span>
+                        <input type="text" class="text_extrasmall taL ml4px" id="LogicSellVal" style="border-radius: 3px 0px 0px 3px;" value="-5.0" onkeydown="return inputCheckNumOnly(event);">
+                        <span class="bold ml4px">%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ul>
+            </div>
+            <!-- // 매도조건 -->
+          </div>
+          <!-- // 매매조건 -->
+          <!-- 유니버스 -->
+          <div class="port_subBox">
+            <ul>
+              <li>
+                <span class="subtitle_16px mr20px">유니버스 선택</span>
+                <button type="button" class="btn_small btn_white">전체선택</button>
+                <button type="button" class="btn_small btn_white">선택해제</button> 
+              </li>
+              <li id="section_univ" class="box_universe">
+                <p>
+                  <input type="checkbox" id="cbUnivKF-ALL" class="ch"
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="run_backtest_button">

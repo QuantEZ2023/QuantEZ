@@ -16,7 +16,6 @@
   margin: 0 auto;
   overflow: hidden;
 }
-
 .area_location p.title {
   font-size: 22px;
   font-weight: bold;
@@ -46,7 +45,6 @@
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 190px;
-  background-color: pink;
 }
 
 /* flow tab */
@@ -118,12 +116,6 @@
   display: inline-block;
   vertical-align: middle;
 }
-.subtitle_16px {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  color: #333;
-}
 .box-port-title input, .box-port-description input {
   border: 1px solid #ccc;
   line-height: 35px;
@@ -134,11 +126,32 @@
   float: left;
   width: 44%;
 }
-.infotxt_13px666 {
-  font-size: 13px;
+.infotxt_12px666 {
+  font-size: 12px;
   color: #666;
 }
 .box-port-sample {
   float: right;
   width: 20%;
+}
+.button-sample {
+  display: block;
+  line-height: 37px;
+  color: #fff;
+  text-align: center;
+  background: #5400CF;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+  margin-top: -1px;
+}
+.box-port-sample .button-sample a:link{
+  text-decoration: none;
+}
+.button-sample a:visited {
+  text-decoration: none;
+}
+.box-port-sample .button-sample a:hover {
+  text-decoration: none;
 }
