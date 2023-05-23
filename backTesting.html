@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome = 1">
+  <title>퀀티지:월봉 백테스팅</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+  </style>
+  <link href="./css/main.css" type="text/css" rel="stylesheet">
+  <link href="./css/gnb.css" type="text/css" rel="stylesheet">
+  <link href="./css/style.css" type="text/css" rel="stylesheet">
+  <link href="./css/backTest.css" type="text/css" rel="stylesheet">
+</head>
+<body class="wrap-main">
+  <div id="header">
+    <div id="header-top">
+      <div id="header-top-right">
+        <ul>
+          <li>
+            <span class="login" onclick="">로그인</span>
+            <span >&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+          </li>
+          <li>
+            <span class="join" onclick="">회원가입</span>
+            <span CL>&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+          </li>
+          <li>
+            <span class="login" onclick="">고객센터</span>
+            <span>&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+          </li>
+          <li class="in-select">
+            <select>
+              <option>연관 사이트</option>
+              <option>삼성증권</option>
+              <option>NH증권</option>
+              <option>한국투자증권</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="header-con">
+      <!-- logo -->
+      <a class="header-logo" href="#">
+        <img src="./img/main_logo.svg" alt="logo">
+      </a>
+      <!-- // logo -->
+      <!-- gnb -->
+      <nav id="gnb">
+        <ul id="MasterMainMenu">
+          <li class="gnb-depth-1">
+            <a class="gnb-depth-1-btn" href="#">퀀티지란?</a>
+          </li>
+          <li class="gnb-depth-1">
+            <a class="gnb-depth-1-btn" href="#">재무제표</a>
+          </li>
+          <li class="gnb-depth-1">
+            <a class="gnb-depth-1-btn" href="#">백테스트</a>
+          </li>
+          <li class="gnb-depth-1">
+            <a class="gnb-depth-1-btn" href="#">공지사항</a>
+          </li>
+          <li class="gnb-depth-1">
+            <a class="gnb-depth-1-btn" href="#">About Us</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- // gnb -->
+    </div>
+  </div>
+  <!-- 메인 콘텐츠 -->
+  <div id="content">
+    <div class="area_location" id="locNewPort">
+      <ul>
+        <li class="fl">
+          <p class="fl title">월봉 백테스팅 포트 만들기</p>
+          <p class="fl info">퀀티지가 제공하는 다양한 조건으로 나만의 투자전략을 만들어 보세요.</p>
+        </li>
+        <li class="fr">
+          <p class="crumbs">
+            백테스트
+            <span></span>
+            월봉 백테스팅 포트 만들기
+          </p>
+        </li>
+      </ul>
+    </div>
+    <!-- real content -->
+    <div class="area_content">
+      <!-- flow tab -->
+      <div class="section_flowTab">
+        <ul>
+          <li id="tabMenu0" style="width: 50%;" class="on">
+            <p>Step.1 기본 설정</p>
+            <span>기본 조건들을 설정하세요.</span>
+          </li>
+          <li id="tabMenu1" style="width: 50%;" class>
+            <p>Step 2. 포트 완성!</p>
+            <span>백테스팅 포트가 완성되었습니다.</span>
+          </li>
+        </ul>
+      </div>
+      <!-- // flow tab -->
+      <div id="NewPortSection0">
+        <div class="section_newport">
+          <!-- 포트 제목, 포트 설명 -->
+          <div class="port_subBox mt-0">
+            <div class="fl box-port-title">
+              <p class="subtitle_16px">포트 제목</p>
+              <div>
+                <input type="text" id="Name" class="fl" placeholder="포트폴리오 제목을 입력해주세요." onfocus="inputElBtn('Name');" onblur="inputElBtn('Name');" onkeydown="inputElBtn('Name');">
+                <span class="fl" style="margin-left: -25px; width: 15px; margin-top: 10px;">
+                  <img id="btnName" src="/img/icn_delForm.png" class="button-box" style="display: none;">
+                </span>
+              </div>
+            </div>
+            <div class="fr box-port-description">
+              <p class="subtitle_16px">
+                포트 설명
+                <span class="infotxt_13px666" style="font-weight: normal; padding-left: 8px;">(선택사항)</span>
+              </p>
+              <div>
+                <input type="txt" id="Description" placeholder="포트폴리오에 대한 설명을 100자 이내롤 남겨주세요." class="fl" style="margin-top: -1px;" onfocus="inputElBtn('Description');" onblur="inputElBtn('Description');" onkeydown="inputElBtn('Description');">
+                <div class="fl" style="margin-left: -5px;width: 15px; margin-top: 10px;">
+                  <img id="btnDescription" src="img/icn_delForm.png" style="margin-left: -25px; cursor: pointer;display: none;">
+                </div>
+              </div>
+            </div>  
+            <div class="box-port-sample">
+              <p class="subtitle_16px">
+                샘플포트 만들기
+                <span class="infotxt_13px666" style="font-weight: normal; padding-left: 8px;">포트? 모르겠다면?</span>
+              </p>
+              <a id="btnSample" class="button-sample" href="https://genport.newsystock.com/resource/kor_monthly_sample_20220707_v1_8.pdf"> 
+                따라만 하면 완성! 샘플포트 만들기
+                <img src="/img/"
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="run_backtest_button">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"> <!-- 푸터 이미지 삽입 및 기본 레이아웃 설정 -->
+    <div class="footer-in"> <!-- 푸터 위치 설정 -->
+      <div class="footer-left">
+        <ul>
+          <li class="footer-left-li-1"> <!-- 카카오톡 상담센터 관련 설명 -->
+            <span class="footer-link-kakaotalk">
+              <span>
+                카카오톡 고객센터 : 평일 10:00~17:00
+              </span>
+              카카오톡 채널@QuantEZ   <!-- 나중에 누르면 카카오톡 오픈링크 QR이 나오는 팝업 제작 예정 -->
+            </span>
+          </li>
+          <li class="footer-left-li-2"> <!-- 블로그, 카페 등의 링크를 이미지 안에 삽입 -->
+            <a href="mailto:ljh990722@g.hongik.ac.kr" class="footer-link-email">ljh990722@g.hongik.ac.kr</a>
+          </li>
+          <li class="footer-socialLink">
+            <a href = "http://facebook.com/NewsyStock" target="_blank">
+              <img src="./img/footer-btn-1.png" alt="페이스북">
+            </a>
+            <a href="https://blog.naver.com/newsystock" target="_blank">
+              <img src="./img/footer-btn-2.png" alt="블로그">
+            </a>
+            <a href="https://cafe.naver.com"/newsystock" target="_blank">
+              <img src="./img/footer-btn-3.png" alt="카페">
+            </a>
+            <span class="kakaotalk" data-pop="#">
+              <img src="./img/footer-btn-4.png" alt="카카오톡">
+            </span>
+            <a href="https://www.youtube.com/channel/UCil6SlGvpvs7H1t5txMPdFw" target="_blank">
+              <img src="./img/footer-btn-5.png" alt="유튜브">
+            </a>
+          </li>
+        </ul>      
+      </div>
+      <div class="footer-right">  <!-- 제작자 정보 및 주의사항 삽입 -->
+        <p class="copy-1">
+          서울시 마포구 와우산로10길 3 엘케이빌딩 3층
+          <br>
+          대표자 : 곽성재, 이희택, 임정희
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          개인정보보호책임자 : 이희택
+          <br><br>
+          <br>
+          아이콘 제작자 : Pixel Perfect
+          <br>
+          본 사이트에 개재되는 정보는 오류 및 지연이 있을 수 있으며, 그 이용에 관한 책임은 이용자 본인에게 있습니다.
+          <br>
+          본 사이트의 내용을 무단전재 및 복사할 수 없습니다.
+          <br>
+          ⓒ QuantEZ Co.,Ltd.
+        </p>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

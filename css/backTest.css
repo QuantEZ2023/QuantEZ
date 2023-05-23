@@ -1,0 +1,144 @@
+#content {
+  width: 100%;
+  overflow: hidden;
+}
+/* area-location */
+.area_location {
+  width: 100%;
+  background-color: #f5f7f9;
+  line-height: 60px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e7e9;
+  border-top: 3px solid #e5e7e9;
+}
+.area_location ul {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.area_location p.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: -1px;
+  margin-right: 20px;
+}
+.area_location p.info {
+  font-size: 13px;
+  columns: #666;
+  letter-spacing: -0.5px;
+}
+.area_location p.crumbs {
+  font-size: 12px;
+  color: #777;
+}
+.area_location p.crumbs span {
+  padding: 0 10px;
+  font-size: 11px;
+  color: #999;
+}
+
+/* area_content */
+.area_content {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 190px;
+  background-color: pink;
+}
+
+/* flow tab */
+.section_flowTab {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.section_flowTab li {
+  position: relative;
+  float: left;
+  width: 20%;
+  color: #333;
+  background: #f1f3f5;
+  border-right: 1px solid #d2d2d2;
+  cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.section_flowTab li:first-child {
+  border-radius: 6px 0 0 6px;
+  -webkit-border-radius: 6px 0 0 6px;
+}
+.section_flowTab li:last-child {
+  border-right: none;
+  border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+}
+.section_flowTab li.on {
+  background: #5400CF;
+  color: #fff;
+}
+.section_flowTab li p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 17px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.section_newport {
+  width: 100%;
+  border: 1px solid #888;
+  margin-top: 30px;
+  overflow-x: auto;
+  padding: 30px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* port_subBox */
+.port_subBox {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.box-port-title {
+  float: left;
+  width: 36%;
+}
+.box-port-title, .box-port-description, .box-port-sample {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+.subtitle_16px {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #333;
+}
+.box-port-title input, .box-port-description input {
+  border: 1px solid #ccc;
+  line-height: 35px;
+  text-indent: 10px;
+  width: 97%;
+}
+.box-port-description {
+  float: left;
+  width: 44%;
+}
+.infotxt_13px666 {
+  font-size: 13px;
+  color: #666;
+}
+.box-port-sample {
+  float: right;
+  width: 20%;
+}

@@ -450,6 +450,7 @@ option {
 }
 .button-box {
   display: block;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
