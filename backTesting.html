@@ -82,7 +82,7 @@
         <li class="fr">
           <p class="crumbs">
             백테스트
-            <span></span>
+            <span>></span>
             월봉 백테스팅 포트 만들기
           </p>
         </li>
@@ -328,14 +328,136 @@
               </li>
               <li id="section_univ" class="box_universe">
                 <p>
-                  <input type="checkbox" id="cbUnivKF-ALL" class="ch"
+                  <input type="checkbox" id="cbUnivKOSPIML-ALL" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSPIML-ALL" class="checkbox_label_np">코스피 중대형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivKOSPIMS-ALL" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSPIMS-ALL" class="checkbox_label_np">코스피 중소형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivKOSDAQL" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSDAQL" class="checkbox_label_np">코스닥 대형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivKOSDAQM" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSDAQM" class="checkbox_label_np">코스닥 중형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivKOSDAQS" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSDAQS" class="checkbox_label_np">코스닥 소형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivKOSDAQXS" class="check_np cbuniv" checked="checked">
+                  <label for="cbUnivKOSDAQXS" class="checkbox_label_np">코스닥 초소형</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cbUnivETF" class="check_np cbuniv">
+                  <label for="cbUnivETF" class="checkbox_label_np">ETF</label>
                 </p>
               </li>
             </ul>
           </div>
+          <!-- // 유니버스 -->
+          <!-- 매수조건식 -->
+          <div class="port_subBox">
+            <div class="subtitle_15px mb-10">
+              <span class="txt_plus mr-20">
+                매수조건식 선택
+              </span>
+              <button type="button" class="btn_white btn-m" style="line-height: 15px;width: auto;">불러오기</button>
+              <button type="button" class="btn_purple btn-m" style="line-height: 15px;width: auto;">저장하기</button>
+            </div>
+            <div class="newport_conditionBox">
+              <ul id="section_buy_condition">
+                <li class="fl addCondition">
+                  <p>
+                    <span class="button_addCondition">+</span>
+                    <span class="infotxt_13px333 bold ml8px">조건식 추가하기</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //매수 조건식 -->
+          <!-- 매수 조건식 설정 -->
+          <div class="port_subBox" style="margin-top: 20px;">
+            <div class="subtitle_15px">매수조건식 설정</div>
+            <div class="box_padding20" style="overflow: hidden;">
+              <!-- 조건식 입력 -->
+              <div class="box_conditionInput">
+                <div class="box-conditionInput-l">
+                  <div>
+                    <input type="text" id="BuyCondExp" class="text_small" placeholder="예) A and B and C and D and E" style="width: 90%;">
+                    <button type="button" id="btnBuyUndo" class="button_refresh">
+                      <img src="/img/icn_undo.png">
+                    </button>
+                    <button type="button" id="btnBuyRedo" class="button_refresh">
+                      <img src="/img/icn_redo.png">
+                    </button>
+                  </div>
+                  <p class="subtitle_14px" id="BuyCondExpTxt"></p>
+                </div>
+                <div class="box-conditionInput-r">
+                  <div class="mb-5">
+                    <button type="button" class="ml4px btn_medium btn_white">조건식 설정안내</button>
+                    <button type="button" class="btn_medium btn_purple">조건식 검증하기</button>
+                  </div>
+                </div>
+              </div>
+              <!-- // 조건식 입력 -->
+            </div>
+            <table class="tbl_horizon" style="margin-top: 10px;">
+              <colgroup>
+                <col style="width: 160px;">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="buy">
+                    매수종목 우선순위
+                  </th>
+                  <td>
+                    <input type="text" id="BaseOrderColumn" class="text_medium" placeholder="조건을 선택해 주세요." style="width: 300px; margin-right: 30px; cursor: pointer;" readonly="readonly">
+                    <button type="button" class="btn_white btn_medium" style="line-height: 15px; width: auto;">불러오기</button>
+                    <button type="button" class="btn_purple btn_medium" style="line-height: 15px; width: auto;">저장하기</button>
+                    <input type="radio" id="BaseOrderDirDESC" name="radiog_dark" class="css-radiobtn" checked="checked">
+                    <label for="BaseOrderDirDESC" class="css-label radGroup1 radGroup2 mr-10">내림차순(높은 값부터)↓</label> 
+                    <input type="radio" id="BaseOrderDirASC" name="radiog_dark" class="css-radiobtn">
+                    <label for="BaseOrderDirASC" class="css-label radGroup1 radGroup2">오름차순(낮은 값부터)↑</label> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="tbl_horizon" style="margin-top: 10px;">
+              <colgroup>
+                <col style="width: 160px;">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="buy">
+                    매수종목 2차 우선순위
+                  </th>
+                  <td>
+                    <input type="checkbox" id="BaseOrder2Use">
+                    <label for="BaseOrder2Use">&nbsp;2차 정렬 사용</label>
+                    <input type="text" id="BaseOrderColumn2" class="text_medium" placeholder="조건을 선택해 주세요." style="width: 300px; margin-right: 30px; cursor: pointer;" readonly="readonly">
+                    <button type="button" class="btn_white btn_medium" style="line-height: 15px; width: auto;display: none;">불러오기</button>
+                    <button type="button" class="btn_purple btn_medium mr-30" style="line-height: 15px; width: auto;display: none;">저장하기</button>
+                    <input type="radio" id="BaseOrderDirDESC2" name="radiog_dark2" class="css-radiobtn" checked="checked">
+                    <label for="BaseOrderDirDESC2" class="css-label radGroup1 radGroup2 mr-10">내림차순(높은 값부터)↓</label> 
+                    <input type="radio" id="BaseOrderDirASC2" name="radiog_dark2" class="css-radiobtn">
+                    <label for="BaseOrderDirASC2" class="css-label radGroup1 radGroup2">오름차순(낮은 값부터)↑</label> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // 매수조건식 정렬 -->
         </div>
-        <div class="run_backtest_button">
-
+        <div class="run_backtest_button" style="margin-top: 30px;">
+          <button id="btnExecBTE" type="button" class="btn_extralarge btn_purple ml8px">백테스팅 실행하기</button>
         </div>
       </div>
     </div>

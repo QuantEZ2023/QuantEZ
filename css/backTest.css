@@ -44,7 +44,7 @@
   width: 1200px;
   margin: 0 auto;
   padding-top: 40px;
-  padding-bottom: 190px;
+  padding-bottom: 150px;
 }
 
 /* flow tab */
@@ -82,7 +82,7 @@
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 17px;
   letter-spacing: -1px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -130,6 +130,10 @@
   font-size: 12px;
   color: #666;
 }
+.infotxt_13px333 {
+  font-size: 13px;
+  color: #333;
+}
 .box-port-sample {
   float: right;
   width: 20%;
@@ -154,4 +158,115 @@
 }
 .box-port-sample .button-sample a:hover {
   text-decoration: none;
+}
+
+/* 매수조건식 설정 */
+.newport_conditionBox {
+  width: 100%;
+  overflow: hidden;
+}
+.newport_conditionBox li:nth-child(3n) {
+  margin-right: 0;
+}
+.newport_conditionBox .conditionBox {
+  width: 32%;
+  margin-right: 22px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding: 15px;
+  transition: 0.2s;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.newport_conditionBox .conditionBox:hover {
+  border: 1px solid #888;
+  cursor: pointer;
+}
+.num_newportCondition {
+  width: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  line-height: 28px;
+  margin-right: 8px;
+
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.newport_conditionBox .conditionBox img {
+  display: block;
+  vertical-align: middle;
+  padding-top: 7px;
+}
+.newport_conditionBox .addCondition {
+  width: 32%;
+  height: 62px;
+  text-align: center;
+  background: #fcfcfc;
+  margin-right: 22px;
+  margin-bottom: 15px;
+  border: 3px dashed #ddd;
+  overflow: hidden;
+  padding: 13px;
+  transition: 0.2s;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.newport_conditionBox .addCondition:hover {
+  background: #f7f7f7;
+  border: 3px dashed #ccc;
+  cursor: pointer;
+}
+.button_addCondition {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  background: #ccc;
+  color: #555;
+  text-align: center;
+}
+.button_refresh {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background: #ddd;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.button_refresh img{
+  margin-bottom: -3px;
+}
+.button_refresh:hover {
+  cursor: pointer;
+  background: #d2d2d2;
+}
+/* 매수조건식 설정 */
+.box_padding20 {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 20px;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.box-conditionInput-l{
+  float: left;
+  width: 76%;
+}
+.box-conditionInput-r{
+  float: right;
+  width: 23%;
+  text-align: right;
 }
