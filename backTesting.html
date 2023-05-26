@@ -71,6 +71,139 @@
       <!-- // gnb -->
     </div>
   </div>
+  <!-- 팝업 시작 -->
+  <div class="pop pop-conditional" id="divPopCond" style="display: block;">
+    <div class="pop-bg"></div>
+    <div class="pop-in">
+      <div class="btn_cls pop-close">
+        <img src="/img/btn_clsPopup_gray.png">
+      </div>
+      <div class="pop-content">
+        <div class="mb-10">
+          <input type="text" placeholder="조건을 단어로 검색해 보세요." class="input-srch" style="width: 40%;" id="ConditionSearch" onkeyup="Component.MPortUI.searchPopCondition();">
+          <span class="btn button-search mr-10"></span>
+          <button type="button" class="btn_small btn_white mr-5" onclick="window.open('https://docs.google.com/spreadsheets/d/1NFa92_yLFpT0gcN4aWpAEDnnmaJFzneOVlZgn5AH94Y/edit?usp=sharing');">조건선택 가이드</button>
+          <button type="button" class="btn_small btn_white mr-5" onclick="window.open('https://docs.google.com/presentation/d/1ACPd4UsVBU7U-X9Hhdk52Yqj5P7aLhxxjY3bTo_sW7U/edit?usp=sharing');">조건식작성 가이드</button>
+        </div>
+        <!-- // 검색박스 -->
+        <!-- 조건박스 시작 -->
+        <div class="input-conditional-content">
+          <!-- 왼쪽 박스 -->
+          <div class="fl box_condLeft" id="ConditionTreeDiv" tabindex="0" onkeyup="Component.MPortUI.searchPopCondition();">
+            <ul id="ConditionTree">
+              <li id="cmain0" class="depth1">
+                <img src="/img/icn_folderOpen.png">
+                <span class="subtitle_15px">종합</span>
+              </li>
+              <li id="csub00" class="depth2" onclick="Component.MPortUI.openPopConditionTree(0, 0, 2);">
+                <span class="infotxt_15px">
+                  <img id="csubimg00" src="img/icn_folderClose.png">
+                  종합점수
+                </span>
+              </li>
+              <li id="citem000" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(1, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(1, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">종합점수</span>
+              </li>
+              <li id="citem001" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(2, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(2, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">종합점수순위</span>
+              </li>
+              <li id="csub01" class="depth2" onclick="Component.MPortUI.openPopConditionTree(0, 1, 3);">
+                <span class="infotxt_15px">
+                  <img id="csubimg01" src="img/icn_folderClose.png">
+                  업종종합점수
+                </span>
+              </li>
+              <li id="citem010" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(3, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(3, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종종합점수순위</span>
+              </li>
+              <li id="citem011" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(4, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(4, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종종합점수순위</span>
+              </li>
+              <li id="citem012" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(5, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(5, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종별종합순위점수</span>
+              </li>
+              <li id="cmain1" class="depth1">
+                <img src="/img/icn_folderOpen.png">
+                <span class="subtitle_15px">모멘텀</span>
+              </li>
+              <li id="csub10" class="depth2" onclick="Component.MPortUI.openPopConditionTree(1, 0, 10);">
+                <span class="infotxt_15px">
+                  <img id="csubimg10" src="/img/icn_folderClose.png">
+                  모멘텀
+                </span>
+              </li>
+              <li id="citem100" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(6, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(6, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀점수</span>
+              </li>
+              <li id="citem101" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(7, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(7, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀점수순위</span>
+              </li>
+              <li id="citem102" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(8, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(8, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종모멘텀점수</span>
+              </li>
+              <li id="citem103" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(9, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(9, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종모멘텀점수순위</span>
+              </li>
+              <li id="citem104" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(10, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(10, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">업종별모멘텀순위점수</span>
+              </li>
+              <li id="citem105" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(11, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(11, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀첫A</span>
+              </li>
+              <li id="citem106" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(12, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(12, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀첫A+</span>
+              </li>
+              <li id="citem107" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(13, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(13, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀A-연속</span>
+              </li>
+              <li id="citem108" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(14, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(14, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">모멘텀A+연속</span>
+              </li>
+              <li id="citem109" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(15, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(15, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">베타</span>
+              </li>
+              <li id="csub11" class="depth2" onclick="Component.MPortUI.openPopConditionTree(1, 1, 23);">
+                <span class="infotxt_15px">
+                  <img id="csubimg11" src="/img/icn_folderClose.png">
+                  가격
+                </span>
+              </li>
+              <li id="citem110" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(16, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(16, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">가격점수</span>
+              </li>
+              <li id="citem111" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(17, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(17, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">상승강도점수</span>
+              </li>
+              <li id="citem112" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(18, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(18, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">VRAC점수</span>
+              </li>
+              <li id="citem113" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(19, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(19, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">이격도점수</span>
+              </li>
+              <li id="citem114" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(20, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(20, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">이격도</span>
+              </li>
+              <li id="citem115" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(528, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(528, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">시가</span>
+              </li>
+              <li id="citem116" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(529, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(529, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">고가</span>
+              </li>
+              <li id="citem117" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(530, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(530, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">저가</span>
+              </li>
+              <li id="citem118" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(531, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(531, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">고가</span>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- 메인 콘텐츠 -->
   <div id="content">
     <div class="area_location" id="locNewPort">
@@ -370,7 +503,7 @@
             </div>
             <div class="newport_conditionBox">
               <ul id="section_buy_condition">
-                <li class="fl addCondition">
+                <li class="fl addCondition" onclick="Component.MPortUI.popupCondition('buy', -1);">
                   <p>
                     <span class="button_addCondition">+</span>
                     <span class="infotxt_13px333 bold ml8px">조건식 추가하기</span>
