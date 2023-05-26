@@ -944,6 +944,7 @@ input[type=checkbox].check_np:checked + label.checkbox_label_np {
 }
 
 .input-conditional-content {
+  height: 390px;
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;

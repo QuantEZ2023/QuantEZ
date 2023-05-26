@@ -153,7 +153,7 @@ option {
 }
 #main-banner-1 .p-2,
 #main-banner-2 .p-2 {
-  height: 88px;
+  height: 80px;
   font-size: 48px;
   color: #374054;
   font-weight: 900;
@@ -164,7 +164,7 @@ option {
 }
 #main-banner-1 .p-3,
 #main-banner-2 .p-3 {
-  height: 120px;
+  height: 100px;
   font-size: 16px;
   color: #909dab;
   letter-spacing: -0.025em;

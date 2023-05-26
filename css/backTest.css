@@ -275,17 +275,14 @@
 }
 /* 조건입력 팝업 - 왼쪽 박스 */
 .box_condLeft {
-  /* width:420px;
+  width:420px;
   height:370px;
   border-right:1px solid #ccc;
   overflow-y: auto;
 
   padding:20px;
-  box-sizing: border-box; */
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
 }
 .box_condLeft li {
   width:100%;

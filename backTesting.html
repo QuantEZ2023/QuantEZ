@@ -13,6 +13,7 @@
   <link href="./css/style.css" type="text/css" rel="stylesheet">
   <link href="./css/backTest.css" type="text/css" rel="stylesheet">
   <script type="text/javascript" src="/js/jquery.mtz.monthpicker.js"></script>
+  <script type="text/javascript" src="/js/backtesting.js"></script>
 </head>
 <body class="wrap-main">
   <div id="header">
@@ -72,15 +73,15 @@
     </div>
   </div>
   <!-- 팝업 시작 -->
-  <div class="pop pop-conditional" id="divPopCond" style="display: block;">
+  <div class="pop pop-conditional pop-style-1" id="divPopCond" style="display: none;">
     <div class="pop-bg"></div>
     <div class="pop-in">
-      <div class="btn_cls pop-close">
+      <div class="btn_cls pop-close" onclick="popupCondition()">
         <img src="/img/btn_clsPopup_gray.png">
       </div>
       <div class="pop-content">
         <div class="mb-10">
-          <input type="text" placeholder="조건을 단어로 검색해 보세요." class="input-srch" style="width: 40%;" id="ConditionSearch" onkeyup="Component.MPortUI.searchPopCondition();">
+          <input type="text" placeholder="조건을 단어로 검색해 보세요." class="input-srch" style="width: 40%;" id="ConditionSearch" onkeyup="MPortUI.searchPopCondition();">
           <span class="btn button-search mr-10"></span>
           <button type="button" class="btn_small btn_white mr-5" onclick="window.open('https://docs.google.com/spreadsheets/d/1NFa92_yLFpT0gcN4aWpAEDnnmaJFzneOVlZgn5AH94Y/edit?usp=sharing');">조건선택 가이드</button>
           <button type="button" class="btn_small btn_white mr-5" onclick="window.open('https://docs.google.com/presentation/d/1ACPd4UsVBU7U-X9Hhdk52Yqj5P7aLhxxjY3bTo_sW7U/edit?usp=sharing');">조건식작성 가이드</button>
@@ -193,7 +194,94 @@
                 <span class="infotxt_15px">저가</span>
               </li>
               <li id="citem118" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(531, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(531, this, 'depth3');" style="display: none;">
-                <span class="infotxt_15px">고가</span>
+                <span class="infotxt_15px">종가</span>
+              </li>
+              <li id="citem119" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(22, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(22, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">종가시초가대비율</span>
+              </li>
+              <li id="citem1110" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(23, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(23, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">일별주가상승률</span>
+              </li>
+              <li id="citem1111" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(25, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(25, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">주간주가상승률1주전</span>
+              </li>
+              <li id="citem1112" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(26, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(26, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">월간주가상승률1개월전</span>
+              </li>
+              <li id="citem1113" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(27, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(27, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">골든크로스(20일/60일)</span>
+              </li>
+              <li id="citem1114" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(28, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(28, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">주가이동평균변화율</span>
+              </li>
+              <li id="citem1115" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(29, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(29, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">신고가갱신(52주)</span>
+              </li>
+              <li id="citem1116" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(30, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(30, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">신저가갱신(52주)</span>
+              </li>
+              <li id="citem1117" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(31, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(31, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">당일고가대비저가변동비율</span>
+              </li>
+              <li id="citem1118" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(153, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(153, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">최저가대비상승비율</span>
+              </li>
+              <li id="citem1119" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(154, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(154, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">최고가대비하락비율</span>
+              </li>
+              <li id="citem1120" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(155, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(155, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">피보나치상승율</span>
+              </li>
+              <li id="citem1121" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(156, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(156, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">피보나치하락율</span>
+              </li>
+              <li id="citem1122" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(216, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(216, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">일별주가상승율250일변동성</span>
+              </li>
+              <li id="csub12" class="depth2" onclick="Component.MPortUI.openPopConditionTree(1, 2, 35);">
+                <span class="infotxt_15px">
+                  <img id="csubimg12" src="/img/icn_folderClose.png">
+                  수급
+                </span>
+              </li>
+              <li id="citem120" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(32, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(32, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">수급점수</span>
+              </li>
+              <li id="citem121" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(33, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(33, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">기관수급점수</span>
+              </li>
+              <li id="citem122" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(34, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(34, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">외국인수급점수</span>
+              </li>
+              <li id="citem123" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(35, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(35, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">기관누적순매수점수</span>
+              </li>
+              <li id="citem124" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(36, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(36, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">외국인누적순매수점수</span>
+              </li>
+              <li id="citem125" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(38, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(38, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">거래비율점수2</span>
+              </li>
+              <li id="citem126" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(39, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(39, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">거래대금(거래소별)점수</span>
+              </li>
+              <li id="citem127" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(40, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(40, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">20일평균거래대금점수</span>
+              </li>
+              <li id="citem128" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(41, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(41, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">20일평균거래량대비거래량점수</span>
+              </li>
+              <li id="citem129" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(42, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(42, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">거래대금</span>
+              </li>
+              <li id="citem1210" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(43, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(43, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">시가총액상위50%이상</span>
+              </li>
+              <li id="citem1211" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(44, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(44, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">거래대금상위50%이상</span>
+              </li>
+              <li id="citem1212" class="depth3" onclick="Component.MPortUI.setPopupConditionDetail(45, this, 'depth3');" ondblclick="Component.MPortUI.setPopupConditionDetailAndValue(45, this, 'depth3');" style="display: none;">
+                <span class="infotxt_15px">거래량</span>
               </li>
               
             </ul>
@@ -503,7 +591,7 @@
             </div>
             <div class="newport_conditionBox">
               <ul id="section_buy_condition">
-                <li class="fl addCondition" onclick="Component.MPortUI.popupCondition('buy', -1);">
+                <li class="fl addCondition" onclick="popupCondition()">
                   <p>
                     <span class="button_addCondition">+</span>
                     <span class="infotxt_13px333 bold ml8px">조건식 추가하기</span>
@@ -590,7 +678,9 @@
           <!-- // 매수조건식 정렬 -->
         </div>
         <div class="run_backtest_button" style="margin-top: 30px;">
-          <button id="btnExecBTE" type="button" class="btn_extralarge btn_purple ml8px">백테스팅 실행하기</button>
+          <button id="btnExecBTE" type="button" class="btn_extralarge btn_purple ml8px">
+            <a href="/backTesting_port.html">백테스팅 실행하기</a>
+          </button>
         </div>
       </div>
     </div>
